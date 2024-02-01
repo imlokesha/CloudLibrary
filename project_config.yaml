@@ -5,8 +5,10 @@ mongodb:
   is_cloud: 1
   user_name: imlokeshak
   password: Svw3gP9msQfSKPQG
-  url: mongodb+srv://{0}:{1}@cluster0.pzflgot.mongodb.net/?retryWrites=true&w=majority&tlsCAFile=isrgrootx1.pem
-  # url: mongodb+srv://{0}:{1}@cluster0.pzflgot.mongodb.net/?retryWrites=true&w=majority
+  url: ("mongodb+srv://<username>:<password>@ac-nlam6d3-shard-00-00.pzflgot.mongodb.net/test?retryWrites=true&w=majority",
+                     tls=True,
+                     tlsAllowInvalidCertificates=True)
+
   # url: mongodb+srv://{0}:{1}@cluster0.5fvxl.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 # local - compass
