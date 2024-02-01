@@ -67,7 +67,7 @@ class MongoDBOperation:
 
     
             client = pymongo.MongoClient(self.get_mongo_db_url(),
-                                         ssl_cert_reqs=ssl.CERT_NONE,ssl=True, tlsAllowInvalidCertificates=True
+                                         ssl_cert_reqs=ssl.CERT_NONE,ssl=True, tlsAllowInvalidCertificates=True, tls= True
                      )  # creating database client object
             return client
         except Exception as e:
