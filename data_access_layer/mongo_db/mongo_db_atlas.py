@@ -59,15 +59,15 @@ class MongoDBOperation:
         Return pymongoClient object to perform action with MongoDB
         """
         try:
-            ssl_options = {
-                'ssl': True,
-                'ssl_ca_certs': '/path/to/ca_cert.pem',
-                'tlsAllowInvalidCertificates': True  # Ignore certificate validation
-                }
+            # ssl_options = {
+            #     'ssl': True,
+            #     'ssl_ca_certs': '/path/to/ca_cert.pem',
+            #     'tlsAllowInvalidCertificates': True  # Ignore certificate validation
+            #     }
 
     
             client = pymongo.MongoClient(self.get_mongo_db_url(),
-                                         ssl_cert_reqs=ssl.CERT_NONE, tlsAllowInvalidCertificates=ssl_options
+                                         ssl_cert_reqs=ssl.CERT_NONE,ssl=True, tlsAllowInvalidCertificates=True
                      )  # creating database client object
             return client
         except Exception as e:
