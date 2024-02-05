@@ -50,7 +50,7 @@ if __name__ == "__main__":
         "root_folder": config_detail["root_folder"]
     }
     save_configuration(project_credentials, "project_credentials.yaml")
-    time.sleep(5)
+    # time.sleep(10)
     cloud_storage = config_detail["cloud_storage"]
 
     # Azure
